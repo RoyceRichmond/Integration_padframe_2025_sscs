@@ -38,3 +38,5 @@ The individual designs on the chip die have this specs:
 For the comp and dummy filling some guidance can be found [here](https://docs.google.com/document/d/19A6Ne7opWf_n_TiCbm6itnKisTnPMyoWfHkXmfdlzS0/edit?tab=t.0#heading=h.364crm57j2pt)
 
 The documentation for Global foundry PDK can be found [here](https://gf180mcu-pdk.readthedocs.io/), the easiest way to find the error is to look for layers and then the specific error, in the case of metals is marked ad Mn.1 where n is the metal, search for Mn.1 of Mn.3 instead of M2.1 or M2.3 this would not return good results and could confuse some people
+
+be aware of this option for final gds [submission](https://github.com/IHP-GmbH/TO_Sep2025/issues/5)
