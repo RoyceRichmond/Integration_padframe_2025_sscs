@@ -40,3 +40,6 @@ For the comp and dummy filling some guidance can be found [here](https://docs.go
 The documentation for Global foundry PDK can be found [here](https://gf180mcu-pdk.readthedocs.io/), the easiest way to find the error is to look for layers and then the specific error, in the case of metals is marked ad Mn.1 where n is the metal, search for Mn.1 of Mn.3 instead of M2.1 or M2.3 this would not return good results and could confuse some people
 
 be aware of this option for final gds [submission](https://github.com/IHP-GmbH/TO_Sep2025/issues/5)
+
+
+for padframe check [this](https://github.com/wafer-space/gf180mcu-project-template?tab=readme-ov-file#building-a-standalone-padring-for-analog-design) and zero size [geometry](https://docs.google.com/document/d/1nUc_582qBiCu-naZLkHyvrfL3f4m-krewwwFoDorsRU/edit?tab=t.0#heading=h.vtvu7lb20p8m)
