@@ -33,6 +33,58 @@ The individual designs on the chip die have this specs:
 ![GDS render of klayout](./render/final.png "GDS render")
 
 
+## Boding diagram
+
+In the Asic we have available from pin 19-51, the pinout is show below
+
+| IO Number | Cell |
+|-----------|------|
+| 19        | Vout synapse 6    |
+| 20        | Vin synapse 6     |
+| 21        | Vout synapse 5    |
+| 22        | Vin synapse 5     |
+| 23        | Vout synapse 4    |
+| 24        | Vin synapse 4     |
+| 25        | Vout synapse 3    |
+| 26        | Vin synapse 3     |
+| 27        | Vout synapse 2    |
+| 28        | Vin synapse 2     |
+| 29        | Vout synapse 1    |
+| 30        | Vin synapse 1     |
+| 31        | V_inhibitory synapses |
+| 32        | V_excitatory synapses |
+| 33        |  V_bias AH neurons |
+| 34        |  Current_in_AH 1   |
+| 35        |  Vout_AH       1   |
+| 36        |  Current_in_AH 2   |
+| 37        |  Vout_AH       2   |
+| 38        |  Current_in_AH 3   |
+| 39        |  Vout_AH       3   |
+| 40        |  Current_in_AH 4   |
+| 41        |  Vout_AH       4   |
+| 42        |  Current_in_AH 5   |
+| 43        |  Vout_AH       5   |
+| 44        |  Vin_LIF    |
+| 45        |  Vout_LIF    |
+| 46        | Data_in config     |
+| 47        | Clk config     |
+| 48        | Enable config     |
+| 49        | clk TG bootstrapped     |
+| 50        | VDD     |
+| 51        | VSS     |
+|56       |vin TG bootstrapped|
+|57       |vout TG bootstrapped|
+
+pin 45 (Vout_LIF) is connected to the first row of the sw matrix
+pin 46 (vin_LIF) is connected to the second row of the sw matrix
+
+The same pattern continues for the complete 24 rows, the sw matrix has 10 colums (which act as the internal connections)
+
+
+There is an aditional 10bits on the final part of the sw matrix that determines the state of the synapses (6 for the synapses, the other 4 bits are not wired to anything)
+
+![Pinout of ASIC](./Bonding/bonding_diagram.drawio.png "GDS render")
+
 ## Documentation
 
 For the comp and dummy filling some guidance can be found [here](https://docs.google.com/document/d/19A6Ne7opWf_n_TiCbm6itnKisTnPMyoWfHkXmfdlzS0/edit?tab=t.0#heading=h.364crm57j2pt)
